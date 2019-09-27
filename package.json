@@ -20,6 +20,7 @@
     "babel-preset-env": "latest",
     "babel-preset-react": "latest",
     "babel-preset-stage-0": "latest",
+    "bluebird": "^3.5.5",
     "electron-builder": "20.28.4",
     "proton-hot-cli": "^0.1.2"
   },
