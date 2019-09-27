@@ -13,7 +13,9 @@
     "release": "electron-builder"
   },
   "dependencies": {
-    "proton-native": "latest"
+    "is-fullwidth-code-point": "^3.0.0",
+    "proton-native": "latest",
+    "strip-ansi": "^5.2.0"
   },
   "devDependencies": {
     "babel-cli": "latest",
