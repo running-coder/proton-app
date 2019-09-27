@@ -9,7 +9,8 @@
     "build": "node_modules/.bin/babel index.js -d bin/",
     "dev": "proton-hot-cli index.js",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "release": "electron-builder"
   },
   "dependencies": {
     "proton-native": "latest"
@@ -29,6 +30,12 @@
     },
     "dmg": {
       "title": "hi"
+    },
+    "nsis": {
+      "createDesktopShortcut": "always"
+    },
+    "linux": {
+      "category": "Graphics"
     }
   }
 }
