@@ -13,16 +13,16 @@
     "release": "electron-builder"
   },
   "dependencies": {
-    "is-fullwidth-code-point": "^3.0.0",
-    "proton-native": "latest",
-    "strip-ansi": "^5.2.0"
+    "proton-native": "1.1.11",
+    "react": "^16.10.0"
   },
   "devDependencies": {
-    "babel-cli": "latest",
-    "babel-preset-env": "latest",
-    "babel-preset-react": "latest",
-    "babel-preset-stage-0": "latest",
-    "bluebird": "^3.5.5",
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
     "electron-builder": "20.44.4",
     "proton-hot-cli": "^0.1.2"
   },
