@@ -49,11 +49,12 @@ branches:
 #                           --path-encrypted-key ".travis/github_deploy_key.enc"
 
 before_deploy:
-  - export TRAVIS_TAG=${TRAVIS_TAG:$(git log --format=%h -1)}
+  - export TRAVIS_TAG=${TRAVIS_TAG:$(npx -c 'echo "$npm_package_version"')-$(git log --format=%h -1)}
   - git tag $TRAVIS_TAG
 
 deploy:
   provider: releases
+  tag_name: 
   api_key:
     secure: CskJjnFUhD4cLyhE5RFZSE/QPV7rl1m2MqXizfCnAOstDaEOOI9hls5zs2jeGWZjxgTSXzMJlCVFDseQll8/dOt4R/JyNfSppQMzweDrCFW4URF3A59xjxmAZ+ktiTYoH6jZH4t5+035G7UAvL1RquLB/5cbmiT4/2AZ3ELkIDctP2N0NV9RJwkDXeM5gr2XPtrG//vAbE53FyGAC0sOs41vCs4vzNr2xkT7gKzN5BtcSZGKAPwMBYgEwcx/xqBB1s7bj1alS9f5EijJ9S+L2gSm4AiMiuY2SQ/KD/6hYfnnmQgACJcMwCPoYCD9b6DsjFcaxrgO0s2AImjuvw1ScTV+nQLcePzGJDKDaaH9oksAuciHeUU9ZvjissjtXBa/F13oWQM0+mj/tkGx3K2tVOKO7fBVRhw/Y+AXKftR4Lr3B65lNkGkV0ubYVhbT/eHIJjnHyOhL2KFCl4/OU0aGukAITkUnhp0i8qtu3huA5puyFAVMS0jVdgl7+jcm3iZoleQNVuNzG2VEYnPsZbW91vQpaAWTFomDxVVTcFvse+QM6DIdeXjvHRF7wDNXctYppnkpsRJy1aLqbOEij/ulcxwya5Broa4OVB/56VeJWR9HpLUAXYhfTxFG3LyuVHhL8S9BIjXCahuqFqb3KPhDo5A2MgRhRBWJm/Nh2JRPEw=
   file:
