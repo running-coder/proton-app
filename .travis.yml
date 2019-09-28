@@ -48,9 +48,9 @@ branches:
 #                           --iv "encrypted_16f789e03726_iv" \
 #                           --path-encrypted-key ".travis/github_deploy_key.enc"
 
-# before_deploy:
-# - export TRAVIS_TAG=${TRAVIS_TAG:$(grep 'version' package.json | cut -d '"' -f4)-$(git log --format=%h -1)}
-# - git tag $TRAVIS_TAG
+before_deploy:
+  - export TRAVIS_TAG=${TRAVIS_TAG:-$(grep 'version' package.json | cut -d '"' -f4)-$(git log --format=%h -1)}
+  - git tag $TRAVIS_TAG
 
 deploy:
   provider: releases
