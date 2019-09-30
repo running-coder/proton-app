@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/running-coder/proton-app.svg?branch=master&style=flat-square)](https://travis-ci.org/running-coder/proton-app)
